@@ -1,0 +1,19 @@
+.empty-state {
+  text-align: center;
+  padding: 52px 24px;
+  color: var(--ink-300);
+  border: 1.5px dashed var(--line);
+  border-radius: var(--radius-md);
+  background: var(--paper-100);
+}
+.empty-state::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: var(--gold-500);
+}
+.empty-state-title { font-family: var(--font-display); font-weight: 700; font-size: 14.5px; color: var(--ink-800); margin-bottom: 5px; }
+.empty-state-subtitle { font-size: 13px; max-width: 40ch; margin: 0 auto; }

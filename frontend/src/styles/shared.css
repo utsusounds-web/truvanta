@@ -1,0 +1,182 @@
+.btn {
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 11px 22px;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease, transform 0.08s ease;
+}
+
+.btn:active:not(:disabled) { transform: scale(0.97); }
+.btn:disabled { opacity: 0.55; cursor: not-allowed; }
+
+.btn-primary {
+  background: var(--ink-900);
+  color: var(--paper-0);
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--ink-800);
+}
+.btn-primary:active:not(:disabled) { transform: scale(0.97); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink-600);
+}
+.btn-ghost:hover:not(:disabled) { color: var(--ink-900); background: var(--paper-100); }
+
+.btn-danger {
+  background: transparent;
+  color: var(--red-600);
+}
+.btn-danger:hover:not(:disabled) { background: #FBEAE7; }
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+.data-table th {
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-300);
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  font-weight: 600;
+}
+
+.data-table td {
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--paper-100);
+  color: var(--ink-800);
+}
+
+.data-table tbody tr:last-child td { border-bottom: none; }
+.data-table tbody tr { transition: background-color 0.12s ease; }
+.data-table tbody tr:hover { background: var(--paper-100); }
+.data-table .num { text-align: right; font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px 3px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+}
+.badge::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+.badge--good, .badge--completed, .badge--reviewed, .badge--approved, .badge--balanced { background: var(--vault-100); color: var(--vault-700); }
+.badge--attention, .badge--pending_approval, .badge--pending_review, .badge--over, .badge--short { background: #FBF1DD; color: var(--gold-600); }
+.badge--critical, .badge--cancelled, .badge--rejected, .badge--requires_review { background: #FBEAE7; color: var(--red-600); }
+.badge--neutral { background: var(--paper-100); color: var(--ink-600); }
+
+/* A left accent stripe for "protection" cards — Away Mode, Audit Trail,
+   Quick Audit — so the sections that actively guard the business read
+   as visually distinct from ordinary data-entry screens. */
+.card--vault {
+  border-left: 3px solid var(--vault-700);
+}
+.card--vault .section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card--vault .section-title::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--vault-700);
+  flex-shrink: 0;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.stat-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--gold-500);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+}
+
+.stat-label {
+  font-size: 11.5px;
+  color: var(--ink-300);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 7px;
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: 23px;
+  font-weight: 700;
+  color: var(--ink-900);
+  font-variant-numeric: tabular-nums;
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.toolbar .input { width: auto; min-width: 220px; }
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  padding-left: 11px;
+  border-left: 3px solid var(--gold-500);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+}
+.form-grid .field { grid-column: span 2; }
+.form-grid .field--half { grid-column: span 1; }
+
+.inline-error {
+  background: #FBEAE7;
+  color: var(--red-600);
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+}
+
+.loading-row { color: var(--ink-300); padding: 24px; text-align: center; font-size: 13px; }

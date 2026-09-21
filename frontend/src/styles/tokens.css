@@ -1,0 +1,58 @@
+:root {
+  /* Color — "Ledger" identity: deep ink for trust/record-keeping, warm
+     gold as the accent of value/attention (echoes currency, not decor).
+     Vault green is the second accent, reserved for protection surfaces —
+     Away Mode, Audit Trail, Quick Audit, reconciled/safe states — so
+     "this keeps your money safe" has its own distinct visual language
+     from "this is worth attention" (gold). */
+  --ink-900: #0B1B2B;
+  --ink-800: #10263B;
+  --ink-600: #2A4A66;
+  --ink-300: #8FA6B8;
+  --paper-0: #FBF9F5;
+  --paper-100: #F3EFE6;
+  --gold-500: #E3A635;
+  --gold-600: #C98A1D;
+  --green-600: #2F9E68;
+  --vault-700: #1B4332;
+  --vault-500: #2F6B4F;
+  --vault-100: #E7F0EA;
+  --red-600: #C0392B;
+  --line: #E3DED2;
+
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-card: 0 1px 2px rgba(16,38,59,0.05);
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--paper-0);
+  color: var(--ink-900);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+  color: var(--ink-900);
+  margin: 0;
+}
+
+button, input, select, textarea { font-family: inherit; font-size: inherit; }
+a { color: inherit; }
+::selection { background: var(--gold-500); color: var(--ink-900); }
+:focus-visible { outline: 2px solid var(--gold-600); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}

@@ -1,0 +1,97 @@
+.pos-shell {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 20px;
+  align-items: start;
+}
+
+.pos-catalog, .pos-cart { padding: 20px; }
+
+.pos-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.pos-product-tile {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 14px 12px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: border-color 0.12s ease, background 0.12s ease;
+}
+.pos-product-tile:hover { border-color: var(--gold-500); background: #FFFBF2; }
+
+.pos-product-name { font-size: 13px; font-weight: 600; color: var(--ink-800); line-height: 1.3; }
+.pos-product-price { font-family: var(--font-mono); font-size: 12.5px; color: var(--ink-600); }
+.pos-product-image { width: 100%; height: 96px; object-fit: cover; border-radius: 6px; margin-bottom: 2px; }
+
+.pos-cart-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px 0;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.pos-cart-line { border-bottom: 1px solid var(--paper-100); padding-bottom: 10px; }
+
+.pos-cart-line-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.pos-cart-line-name { font-size: 13.5px; font-weight: 600; }
+
+.pos-cart-line-remove {
+  background: none; border: none; color: var(--ink-300); cursor: pointer; font-size: 12px;
+}
+.pos-cart-line-remove:hover { color: var(--red-600); }
+
+.pos-cart-line-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.pos-qty-input { width: 72px; padding: 6px 8px; font-size: 13px; }
+
+.pos-line-total { font-family: var(--font-mono); font-size: 13px; font-weight: 600; }
+
+.pos-summary {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  margin-bottom: 8px;
+}
+
+.pos-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--ink-600);
+  padding: 3px 0;
+}
+
+.pos-summary-total {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--ink-900);
+  border-top: 1px solid var(--line);
+  margin-top: 6px;
+  padding-top: 8px;
+}
+
+@media (max-width: 900px) {
+  .pos-shell { grid-template-columns: 1fr; }
+}

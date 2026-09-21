@@ -1,0 +1,49 @@
+.sync-indicator-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sync-indicator {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--paper-100);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-600);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+.sync-indicator:hover { background: var(--line); }
+
+.sync-offline-toggle {
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-300);
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.sync-offline-toggle:hover { color: var(--ink-900); background: var(--paper-100); border-color: var(--ink-300); }
+
+.sync-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.sync-dot--online { background: var(--green-600); }
+.sync-dot--offline { background: var(--red-600); }
+.sync-dot--syncing { background: var(--gold-500); animation: sync-pulse 1s ease-in-out infinite; }
+
+@keyframes sync-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}

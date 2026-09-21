@@ -1,0 +1,40 @@
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.page-title {
+  font-size: 25px;
+  letter-spacing: -0.015em;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.page-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 34px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--gold-500);
+}
+
+.page-title--vault::after {
+  background: var(--vault-700);
+}
+
+.page-subtitle {
+  color: var(--ink-600);
+  font-size: 13.5px;
+  margin: 6px 0 0;
+  max-width: 56ch;
+}
+
+.page-actions { display: flex; gap: 10px; flex-shrink: 0; }
