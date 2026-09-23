@@ -36,10 +36,13 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        # Add the column without db_index (no _like index created here) so
+        # the subsequent AlterField can add unique+index cleanly without a
+        # duplicate-index error on PostgreSQL varchar columns.
         migrations.AddField(
             model_name="business",
             name="signup_code",
-            field=models.CharField(max_length=12, null=True, blank=True, db_index=True),
+            field=models.CharField(max_length=12, null=True, blank=True),
         ),
         migrations.RunPython(backfill_signup_codes, noop),
         migrations.AlterField(
